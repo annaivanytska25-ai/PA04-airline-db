@@ -55,7 +55,7 @@ create index idx_bookings_status_booked_at
 on bookings(status, booked_at desc);
 ```
 План виконання :
-```sql
+```txt
 Limit  (cost=0.87..21.41 rows=100 width=35) (actual time=0.039..0.400 rows=100 loops=1)
   ->  Nested Loop  (cost=0.87..684.45 rows=3328 width=35) (actual time=0.037..0.391 rows=100 loops=1)
         ->  Nested Loop  (cost=0.58..562.86 rows=3328 width=32) (actual time=0.032..0.233 rows=100 loops=1)
